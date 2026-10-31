@@ -18,7 +18,7 @@ import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 # ---------------- настройки ----------------
-CLIENT_ID = "ВСТАВЬ_СЮДА_APPLICATION_ID"   # Discord Developer Portal → твоё приложение «Legion» → Application ID
+CLIENT_ID = "1565974924063940618"         # общее приложение «Legion»; своё — Discord Developer Portal → Application ID
 PORT = 47321                                # тот же порт стоит в скрипте для Tampermonkey
 LARGE_IMAGE = "legion"                      # ключ картинки из Rich Presence → Art Assets (нет картинки — просто без неё)
 GAME_URL = "https://play.multidonate.ru/c/zakvielchannel/"

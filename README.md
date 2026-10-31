@@ -34,31 +34,33 @@
 
 ## Установка
 
-### 1. Приложение в Discord (один раз)
-
-1. Открой [discord.com/developers/applications](https://discord.com/developers/applications) → **Создать новое приложение**.
-2. Назови его **Legion** — это имя будет после «Играет в».
-3. На вкладке **General Information** скопируй **Application ID**.
-4. *(по желанию)* **Rich Presence → Art Assets** → загрузи картинку (например, `assets/legion.png` или `assets/icon-emblem.png`) с именем **`legion`**.
-
-### 2. Python
+### 1. Python
 
 Скачай Python с [python.org](https://www.python.org/downloads/). При установке поставь галочку **Add python.exe to PATH**.
 
-### 3. Программа
+### 2. Программа
 
-1. Скачай репозиторий: зелёная кнопка **Code → Download ZIP**, распакуй в любую папку.
-2. Открой `legion_discord.py` Блокнотом и впиши свой Application ID вместо `ВСТАВЬ_СЮДА_APPLICATION_ID`.
+Скачай репозиторий: зелёная кнопка **Code → Download ZIP**, распакуй в любую папку. Больше ничего настраивать не нужно — приложение «Legion» в Discord уже общее, с готовой картинкой.
 
-### 4. Скрипт в браузере
+### 3. Скрипт в браузере
 
 1. Установи расширение [Tampermonkey](https://www.tampermonkey.net/) (Chrome, Edge, Firefox).
 2. Открой файл [`legion-discord.user.js`](legion-discord.user.js) → кнопка **Raw** → Tampermonkey предложит установить.
 3. Когда Tampermonkey спросит про доступ к `127.0.0.1` — нажми **«Всегда разрешать»** (это твой же компьютер, туда скрипт отправляет статус).
 
-### 5. Discord
+### 4. Discord
 
 **Настройки → Конфиденциальность активности** → включи показ активности.
+
+<details>
+<summary>Хочу своё название или картинку</summary>
+
+1. Открой [discord.com/developers/applications](https://discord.com/developers/applications) → **Создать новое приложение** и назови как хочешь — это имя будет после «Играет в».
+2. На вкладке **General Information** скопируй **Application ID**.
+3. **Rich Presence → Art Assets** → загрузи картинку с именем **`legion`** (можно взять из папки `assets`).
+4. Открой `legion_discord.py` Блокнотом и замени число в строке `CLIENT_ID = "…"` на свой ID.
+
+</details>
 
 ## Запуск
 
@@ -74,7 +76,7 @@
 
 | Настройка | Что делает |
 |---|---|
-| `CLIENT_ID` | Application ID твоего приложения в Discord |
+| `CLIENT_ID` | Application ID приложения в Discord (по умолчанию — общее «Legion») |
 | `LARGE_IMAGE` | Имя картинки из Art Assets |
 | `GAME_URL` | Ссылка для кнопки «Открыть Легион» (поставь свой канал) |
 | `SHOW_BUTTON` | `False` — без кнопки |
